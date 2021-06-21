@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-puts("programming is like building a multilingual puzzle \n");
+	printf("with proper grammar, but the outcome is a piece of are,\n");
+	return (0);
 
-return (0);
 }
