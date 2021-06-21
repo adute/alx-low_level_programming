@@ -7,13 +7,14 @@
  */
 int main(void)
 {
-	int singleDigit = 0;
+	char s;
 
-	while ( singleDigit < 10 )
+	for(s = 'a'; s <= 'z' && (s != e && s != q); s++)
 	{
-		printf("%d", singleDigit);
-		singleDigit++;
+		putchar(s);
+
 	}
-return (0);
+	putchar('\n');
+
 
 }
