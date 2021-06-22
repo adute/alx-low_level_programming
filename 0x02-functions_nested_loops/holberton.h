@@ -8,6 +8,6 @@
  * on error, -1 is returned, and errno is set appropriate
  */
       int _putchar(char c);
-
+      void print_alphabet(void);
 
 
