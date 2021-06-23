@@ -1,16 +1,10 @@
 #include "holberton.h"
 /**
- * main -entry point
+ * print_alphabet - prints abc..z
  *
- * return: o
+ * end with new line
  *
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	char s = 'a';
