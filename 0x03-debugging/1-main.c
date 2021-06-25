@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	int i; /* declaration of variable */
+	int i;/* declaration of variable */
 	
 	printf("infinite loop incoming :(\n");
 	
@@ -20,5 +20,5 @@ int main(void)
 	
 	printf("infinite loop avoided!\\o\n");
 	
-	return(0);
+	return (0);
 }
