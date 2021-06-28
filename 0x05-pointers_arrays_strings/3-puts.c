@@ -10,6 +10,10 @@ void _puts(char *str)
 {
 	char s = *str;
 	
-	_putchar(s);
+	while (*str != '\0')
+	{
+		_putchar(s[]);
+		
+	}
 	_putchar('\n');
 }
