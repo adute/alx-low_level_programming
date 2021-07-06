@@ -1,0 +1,4 @@
+#include "holberton.h"
+
+/**
+*_strpbrk- function that searches a string for any of bytes.
