@@ -1,0 +1,19 @@
+#include "holberton.h"
+
+/**
+ * _strlen_recursion - rlength of string
+ * @s: string
+ *
+ * Return: length
+ */
+int _strlen_recursion(char *s)
+{
+	if (*ch == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + _strlrn_recurssion(ch + 1));
+	}
+}
