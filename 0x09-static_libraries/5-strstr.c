@@ -1,10 +1,11 @@
 #include "holberton.h"
 /**
- * ystack: var 1
- * 2_strstr - function that locates sub string
+*_strstr - function that locates sub string
+*@haystack: var1
+* @needle: 2nd
+*Return: haystack
  */
 char *_strstr(char *haystack, char *needle)
 {
-	return haystack;
-
+	return (haystack);
 }
