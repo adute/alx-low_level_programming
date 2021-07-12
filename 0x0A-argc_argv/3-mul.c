@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - program that prints all arguments it receives
  * @argc: argument count
@@ -8,13 +9,17 @@
  */
 int main(int argc, char *argv[])
 {
-	int count;
+	int mul;
 
-	argv[argc] = NULL;
-
-	for (count = 0; count < argc; count++)
+	if (argc < 3)
 	{
-		printf("%s \n", argv[count]);
+		printf("Error\n");
+			return (1);
+	}
+	else
+	{
+		mul = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", mul);
 	}
 	return (0);
 }
