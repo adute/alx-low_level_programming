@@ -11,12 +11,12 @@ int main(int argc, char *argv[])
 {
 	int count = 0;
 
-	argv[argc] = NULL;
+	(void) argv;
 
-	while (argc > 1 && argc != count)
+	while (count < argc)
 	{
 		count++;
 	}
-	printf("%d \n", count);
+	printf("%d\n", count - 1);
 	return (0);
 }
