@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "holberton.h"
+
 /**
  *main - program that prints all arguments it receives
  * @argc: argument count
@@ -9,8 +11,6 @@
 int main(int argc, char *argv[])
 {
 	int count;
-
-	argv[argc] = NULL;
 
 	for (count = 0; count < argc; count++)
 	{
