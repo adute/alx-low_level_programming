@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * _strdup - function thatrtrn pointer to newly allocated memory
@@ -10,9 +10,8 @@
 char *_strdup(char *str)
 {
 	char *p;
-	int l = _strlen(str); 
 
-	p = (char *)malloc(l);
+	p = (char *)malloc(sizeof(s));
 	if (*str == '\0')
 	{
 		return ('\0');
