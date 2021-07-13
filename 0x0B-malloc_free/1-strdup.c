@@ -10,8 +10,9 @@
 char *_strdup(char *str)
 {
 	char *p;
+	int l = _strlen(str); 
 
-	p = (char *)malloc(_strlen(str));
+	p = (char *)malloc(l);
 	if (*str == '\0')
 	{
 		return ('\0');
