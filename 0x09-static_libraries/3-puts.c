@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 /**
  * _puts - function that prints string followe*d by new line
  * @str: variable to be printed
@@ -8,14 +9,5 @@
  */
 void _puts(char *str)
 {
-	int i = 0;
-	int len;
-
-	len = _strlen(str);
-
-	for (i = 0; i <= len; i++)
-	{
-		_putchar(str[i]);
-	}
 	_putchar('\n');
 }

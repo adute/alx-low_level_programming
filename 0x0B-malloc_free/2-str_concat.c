@@ -10,18 +10,31 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char  *r;
-	char *t;
 	char *con;
+	unsigned int l1 = sizeof(s1);
+	unsigned int l2 = sizeof(s2);
 
-	con = t = malloc(sizeof(s1) + sizeof(s2) + 1);
-	for (r = s1; (*r = *t) != '\0'; ++r)
+	con = (char *)malloc(l1 + l2 + 1);
+	if (con == NULL)
+		return (NULL);
+	if (s1 != NULL)
 	{
-		++t;
+		while (*s1)
+		{
+			*con = *s1;
+			s1++;
+			con++;
+		}
 	}
-	for (r = s2; (*r = *t) != '\0'; ++r)
+	if (s2 != NULL)
 	{
-		++t;
+		while (*s2)
+		{
+			*con = *s2;
+			s2++;
+			con++;
+		}
 	}
+	con -= l1 + l2;
 	return (con);
 }
