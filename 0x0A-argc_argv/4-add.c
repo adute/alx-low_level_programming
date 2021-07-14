@@ -10,22 +10,25 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum;
+	int sum, i;
 	char c = **argv;
 
 	if (argc <= 1)
 	{
 		printf("0\n");
 	}
-	if (!isdigit(c))
-	{
-		sum = atoi(argv[1]) + atoi(argv[2]);
-		printf("%d\n", sum);
-	}
-	else
+	if (isdigit(c))
 	{
 		printf("Error\n");
 		return (1);
+	}
+	else
+	{
+		for(i = 0; i < argc; i++)
+		{
+		sum += atoi(argv[i]);
+		}
+		printf("%d\n", sum);
 	}
 	return (0);
 }

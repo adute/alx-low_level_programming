@@ -10,21 +10,34 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents;
+	int cents, i = 0;
+	int ch[5] = {25, 10, 5, 2, 1};
+	int change = atoi(argv[1]);
 
-	if (argc < 2)
+	if (argc == 2)
 	{
-		printf("Error\n");
-			return (1);
+		while (i < 5)	
+		{
+			cents = change / ch[i];
+			if (change % ch[i] == 0)
+			{
+				printf("%d\n", cents);
+				break;
+			}
+			else
+			{
+				i++;
+			}
+		}
 	}
-	else if (atoi(*argv) < 0)
+	else if (change < 0)
 	{
 		printf("0\n");
 	}
 	else
 	{
-		cents = atoi(argv[1]) / 10;
-		printf("%d\n", cents);
+		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
