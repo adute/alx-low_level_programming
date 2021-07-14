@@ -1,5 +1,4 @@
 #include "holberton.h"
-int _strlen(char *s);
 
 /**
  * _puts - function that prints string followe*d by new line
