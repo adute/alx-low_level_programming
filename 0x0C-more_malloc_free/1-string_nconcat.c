@@ -16,22 +16,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i;
 	char *ncon;
 
-	ncon = malloc(l1 + n + 1);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	if (n >= l2)
 		n = l2;
+	ncon = malloc(l1 + n + 1);
 	if (ncon == NULL)
 		return (NULL);
 	for (i = 0; i < (l1 + n); i++)
-		if (i < l1)
-			ncon[i] = s1[i];
-		else
-			ncon[i] = s2[i - l1];
+		ncon[n++] = s1[i];
+	for (i = 0; s2[i] != '\0' && i < n ; i++)
+		ncon[n++] = s2[i];
 	ncon[i] = '\0';
 	return (ncon);
-
-
 }
