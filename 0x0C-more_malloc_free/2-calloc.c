@@ -31,9 +31,8 @@ char *_memset(char *s, char b, unsigned int n)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
-	unsigned int i;
 
-	ptr = malloc(nmemb * sizeof(size)i + 1);
+	ptr = malloc(nmemb * sizeof(size) + 1);
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	if (ptr == NULL)
