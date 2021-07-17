@@ -22,12 +22,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (n >= l2)
 		n = l2;
-	ncon = (char *)malloc(l1 + n + 1);
+	ncon = malloc(sizeof(char) * (l1 + n));
 	if (ncon == NULL)
 		return (NULL);
-	for (i = 0; i <= l1 + n ; i++)
+	for (i = 0; i <= l1; i++)
 		ncon[i] = s1[i];
-	for (j = 0; s2[i] != '\0' && j <= n ; j++)
+	for (j = 0; s2[i] != '\0' && j < n ; j++, i++)
 		ncon[i] = s2[j];
 	ncon[i] = '\0';
 	return (ncon);
