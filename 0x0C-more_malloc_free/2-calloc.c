@@ -32,7 +32,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
 
-	ptr = (char *)malloc(nmemb * size + 1);
+	ptr = (char *)malloc(nmemb * size);
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	if (ptr == NULL)
