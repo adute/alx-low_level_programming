@@ -9,10 +9,7 @@
  */
 void free_dog(dog_t *d)
 {
-	dog_t *dog;
-       
-	dog = malloc(sizeof(d));
-	if (dog == NULL)
-		return;
-	free(dog);
+	if (d != NULL)
+		d = (dog_t *)malloc(sizeof(dog_t));
+	free(d);
 }
