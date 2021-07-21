@@ -22,12 +22,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	if (d)
-	{
+	{	
 		d->name = malloc(sizeof(*name));
 		d->owner = malloc(sizeof(*owner));
 		d->name = name;
 		d->age = age;
 		d->owner = owner;
-		return (d);
 	}
+	return (d);
 }
