@@ -13,8 +13,8 @@ void print_all(const char *const format, ...)
 	char *str;
 	double f;
 	int i;
-
 	va_list arg;
+
 	va_start(arg, format);
 
 	while (format)
@@ -28,6 +28,6 @@ void print_all(const char *const format, ...)
 		if (str == NULL)
 			printf("nil");
 	}
-	
+
 	va_end(arg);
 }
