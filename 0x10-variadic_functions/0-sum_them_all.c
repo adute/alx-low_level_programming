@@ -7,7 +7,7 @@
  * @n: first param
  * @...: variable pparams
  *
- * Return: sum 
+ * Return: sum
  * 0: if n == 0
  */
 int sum_them_all(const unsigned int n, ...)
