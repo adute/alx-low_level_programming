@@ -15,8 +15,8 @@ while (t != NULL)
 		printf("[0] (nil)\n");
 	else
 		printf("[%d]%s\n", t->len, t->str);
-	t = t->next;
 	cnt++;
+	t = t->next;
 }
 return (cnt);
 }
