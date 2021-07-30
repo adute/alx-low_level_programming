@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	newE = (list_t *)malloc(sizeof(list_t));
 
-	if (newE == NULL)
+	if (newE == NULL || str1 == NULL)
 	{
 		free(newE);
 		return (NULL);
