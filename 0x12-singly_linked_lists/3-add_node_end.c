@@ -12,13 +12,19 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newE, *tmp;
 	char *str1 = strdup(str);
+
 	if (head)
 	{
 		newE = malloc(sizeof(list_t));
 		newE->str = str1;
 		newE->next = NULL;
 		newE->len = strlen(str1);
-		if (newE == NULL )
+		if (newE == NULL)
+		return (NULL);
+	}
+	if (str1 == NULL || newE == NULL)
+	{
+		free(newE);
 		return (NULL);
 	}
 	if (*head == NULL)
