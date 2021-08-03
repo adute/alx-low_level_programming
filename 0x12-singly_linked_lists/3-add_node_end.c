@@ -19,7 +19,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		newE->str = str1;
 		newE->next = NULL;
 		newE->len = strlen(str1);
-		if (newE == NULL)
+		if (newE == NULL || str1 == NULL)
+			free(newE);
 		return (NULL);
 	}
 	if (*head == NULL)
