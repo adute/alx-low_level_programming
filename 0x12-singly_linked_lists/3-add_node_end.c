@@ -20,11 +20,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		newE->next = NULL;
 		newE->len = strlen(str1);
 	}
-	if (str1 == NULL || newE == NULL)
-	{
-		free(newE);
-		return (NULL);
-	}
 	if (*head == NULL)
 	{
 		*head = newE;
@@ -41,4 +36,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	return (tmp);
 	}
 
+	if (str1 == NULL || newE == NULL)
+	{
+		free(newE);
+		return (NULL);
+	}
 }
