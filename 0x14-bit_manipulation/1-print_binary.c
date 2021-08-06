@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "main.h"
 /**
  * print_binary - function that prints the binary rep.
  * @n: number in binary
