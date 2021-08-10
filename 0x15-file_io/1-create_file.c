@@ -29,6 +29,7 @@ int create_file(const char *filename, char *text_content)
 
 	crt = write(STDOUT_FILENO, text_content, buf);
 	if (crt == -1)
+		free(buf);
 		return (-1);
 	close(file);
 	return (1);
