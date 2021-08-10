@@ -7,22 +7,22 @@
 #include <fcntl.h>
 /**
  * append_text_to_file - appends file
- * @filename: name of file 
+ * @filename: name of file
  * @text_content: NULL terminated string to add at the end file
  *
  * Return: 1 on success | text_content is NULL and file exists
  * -1: if failed to be appended, no filname and no text_content
- *  filename doesn't exist dont create 
+ *  filename doesn't exist dont create
  *  create permissions rw-------
- *  
+ *
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int file = open(filename, O_APPEND);
-	int *buf = malloc(sizeof(text_content));
+	size_t buf = (size_t)malloc(sizeof(text_content));
 	int apnd;
 
-	if ((filename == NULL && text_content == NULL) 
+	if ((filename == NULL && text_content == NULL)
 			|| file == -1)
 		return (-1);
 
