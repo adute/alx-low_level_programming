@@ -20,17 +20,19 @@ int create_file(const char *filename, char *text_content)
 {
 	int file = open(filename, O_CREAT | O_WRONLY | O_TRUNC,
 			600);
-	size_t buf = (size_t)malloc(sizeof(text_content));
+	size_t *buf = (size_t *)malloc(sizeof(text_content));
 	int crt;
 
 	if (filename == NULL || file == -1 ||
 			text_content == NULL)
 		return (-1);
 
-	crt = write(STDOUT_FILENO, text_content, buf);
+	crt = write(STDOUT_FILENO, text_content, (size_t)buf);
 	if (crt == -1)
+	{
 		free(buf);
 		return (-1);
+	}
 	close(file);
 	return (1);
 }
