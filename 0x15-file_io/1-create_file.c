@@ -18,23 +18,21 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int crt, rd;
+	int crt;
 	int file = open(filename, O_CREAT | O_WRONLY | O_TRUNC,
 			600);
 	text_content = malloc(sizeof(text_content));
 
-	if (filename == NULL || file == -1 )
+	if (filename == NULL || file == -1)
 		return (-1);
 	if (text_content == NULL)
 	{
-		free(text_content);
+		free(text_context);
 		return (-1);
 	}
-	rd = read(file, text_content, sizeof(text_content));
-	crt = write(STDOUT_FILENO, text_content, rd);
+	crt = write(file, text_content, sizeof(text_content) - 1);
 	if (crt == -1)
 	{
-	/*	free(buf);*/
 		return (-1);
 	}
 	close(file);
