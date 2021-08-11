@@ -18,7 +18,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int crt;
+	int crt, rd;
 	int file = open(filename, O_CREAT | O_WRONLY | O_TRUNC,
 			600);
 	text_content = malloc(sizeof(text_content));
@@ -30,7 +30,8 @@ int create_file(const char *filename, char *text_content)
 		free(text_content);
 		return (-1);
 	}
-	crt = write(STDOUT_FILENO, text_content, sizeof(text_content));
+	rd = read(file, text_content, sizeof(text_content));
+	crt = write(STDOUT_FILENO, text_content, rd);
 	if (crt == -1)
 	{
 	/*	free(buf);*/
