@@ -8,41 +8,42 @@
 /**
  * main - copies file_from file_to
  * POSIX STDOU
- * @filename: name of file
- * @letters: number of letters
+ * @argc: name of file
+ * @argv: number of letters
  * Return: file_to
  * 0: if filename is null,not opened/read/write
  */
 int main(int argc, char *argv[])
 {
 	int file1 = open(argv[1], O_RDONLY);
-	int file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0700);
+	int file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 644);
 	char *buf[1024];
-	int rd;
+	int rd, wrt, c1, c2;
+
 	if (argc != 3)
 	{
-		dprintf(3, "Usage: %s filename\n", argv[0]);
+		dprintf(2, "Usage: %scp file_from file_to \n", argv[0]);
+		exit(97);
 	}
-
-
-	if (file1 == -1 || file2 == 1)
-		return (0);
-
 	rd = read(file1, buf, 1024);
-	while (rd > 0)	
+	if (file1 == -1 || rd == -1)
 	{
-		if (write(STDOUT_FILENO, buf, rd) != rd)
-		{
-			return (0);
-		}
-		if (rd == -1)
-		{
-			return (0);
-		}
+		dprintf(2, "Error: %sCan't read from file NAME_OF_THE_FILE", argv[1]);
+		exit(98);
 	}
-	close(file2);
-		close (file1);
-		return (1);
-
+	wrt = write(STDOUT_FILENO, buf, rd);
+	if (file2 == -1 || wrt == -1)
+	{
+		dprintf(2, "Error: %sCan't write to NAME_OF_THE_FILE\n", argv[2]);
+		exit(99);
+	}
+	c1 = close(file1);
+	c2 = close(file2);
+	if (c1 == -1 || c2 == -1)
+	{
+		dprintf(2, "Error: %sCan't close fd FD_VALUE \n", argv[0]);
+		exit(100);
+	}
+	return (0);
 }
 
