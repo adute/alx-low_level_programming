@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Printing lowercase alphabets
+ * Printing base 16 lowercase
  *
  * Return: Always 0
  */
