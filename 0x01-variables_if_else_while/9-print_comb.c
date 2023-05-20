@@ -11,17 +11,11 @@
 int main(void)
 {
 	int n;
-	int m;
 
 	for (n = 0; n <= 9; n++)
 	{
-		while (m <= 9)
-		{
-			putchar('0' + n);
-			putchar('0' + m);
-			putchar(',');
-			m++;
-		}
+		putchar('0' + n);
+		putchar(',');
 	}
 	putchar('\n');
 
