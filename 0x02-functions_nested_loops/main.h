@@ -5,6 +5,7 @@
  * @c: character to be printed
  * print_alphabet - prints lower case
  * print_alphabet_x10 - prints 10x
+ * int _islower - checks lower case
  * Return: 1
  *
  */
@@ -12,4 +13,5 @@
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
+int _islower(int c);
 #endif
