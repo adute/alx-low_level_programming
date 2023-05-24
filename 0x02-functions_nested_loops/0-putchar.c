@@ -8,11 +8,13 @@
 int main(void)
 {
 	char c[7] = '_putchar';
+	int i = 0;
 
-	for (int i = 0; i < 8; i++)
+	while (i < 8)
 	{
 		_putchar(c[i]);
-		_putchar('\n');
+		i++;
 	}
+		_putchar('\n');
 	return (0);
 }
