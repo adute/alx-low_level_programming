@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char c[7] = '_putchar';
+	char c[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int i = 0;
 
 	while (i < 8)
