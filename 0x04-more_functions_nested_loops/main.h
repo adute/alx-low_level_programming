@@ -17,6 +17,7 @@
  * print_most_numbers - print 0 to 9 except 2 and 4
  * more_numbers - prints 0-14, 10X
  * print_line - draws a straight line
+ * print_diagonal - draws diagonal line
  */
 int _isupper(int c);
 int _isdigit(int c);
@@ -26,4 +27,5 @@ void print_numbers(void);
 void print_most_numbers(void);
 void more_numbers(void);
 void print_line(int n);
+void print_diagonal(int n);
 #endif
