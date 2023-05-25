@@ -11,8 +11,13 @@
  * @a: number 1
  * @b: multiple 2
  * Return: multiple of a and b
+ *
+ * _putchar - writes character to stdout
+ * print_numbers - prints 0 to 9
  */
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
+int _putchar(char c);
+void print_numbers(void);
 #endif
