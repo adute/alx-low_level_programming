@@ -18,6 +18,9 @@
  * more_numbers - prints 0-14, 10X
  * print_line - draws a straight line
  * print_diagonal - draws diagonal line
+ *
+ * print_square - prints square
+ * @size: size of the square
  */
 int _isupper(int c);
 int _isdigit(int c);
@@ -28,4 +31,5 @@ void print_most_numbers(void);
 void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
+void print_square(int size);
 #endif
