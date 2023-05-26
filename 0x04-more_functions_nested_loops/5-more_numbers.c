@@ -22,8 +22,7 @@ void more_numbers(void)
 		k = 10;
 		while (k <= 14)
 		{
-		_putchar('1');
-		_putchar(k%10 + 48);
+		_putchar('1' + k%10 + 48);
 		k++;
 		}
 		_putchar('\n');
