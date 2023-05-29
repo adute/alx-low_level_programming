@@ -24,6 +24,9 @@
  * @a: array to be printed
  * @n: number of elements of array
  *
+ * _strcpy - copies string
+ * @dest: destination string
+ * @src: source string
  */
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
@@ -31,4 +34,5 @@ int _strlen(char *s);
 int _putchar(char c);
 void _puts(char *str);
 void print_array(int *a, int n);
+char *_strcpy(char *dest, char *src);
 #endif /* main.h */
