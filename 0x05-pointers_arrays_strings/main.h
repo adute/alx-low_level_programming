@@ -19,10 +19,16 @@
  *
  * _puts - prints string
  * @str - string to be printed
+ * 
+ * print_array - prints array
+ * @a: array to be printed
+ * @n: number of elements of array
+ *
  */
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
 int _putchar(char c);
 void _puts(char *str);
+void print_array(int *a, int n);
 #endif /* main.h */
