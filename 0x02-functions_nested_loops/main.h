@@ -11,6 +11,8 @@
  * print_sign - prints sign of a number
  * Return: 1
  *
+ * print_last_digit - prints last digit
+ * Return: value of last digit
  */
 
 int _putchar(char c);
@@ -20,4 +22,5 @@ int _islower(int c);
 int _isalpha(int c);
 int _abs(int num);
 int print_sign(int n);
+int print_last_digit(int);
 #endif
