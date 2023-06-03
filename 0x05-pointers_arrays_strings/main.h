@@ -19,7 +19,7 @@
  *
  * _puts - prints string
  * @str - string to be printed
- * 
+ *
  * print_array - prints array
  * @a: array to be printed
  * @n: number of elements of array
@@ -27,6 +27,9 @@
  * _strcpy - copies string
  * @dest: destination string
  * @src: source string
+ *
+ * print_rev - prints string in reverse
+ *
  */
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
@@ -35,4 +38,5 @@ int _putchar(char c);
 void _puts(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
+void print_rev(char *s);
 #endif /* main.h */
