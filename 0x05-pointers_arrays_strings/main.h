@@ -11,8 +11,8 @@
  * @a: integer one
  * @b: integer 2
  *
- * _strlen - print length of string
- * @s: string to be measured
+ * _strlen - print length of  the string
+ * @s: string whose length to be measured
  *
  * _putchar - writes charcter to stdout
  * @c: char to be printed
