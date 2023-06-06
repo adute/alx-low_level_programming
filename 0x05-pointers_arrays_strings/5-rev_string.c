@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strlen - print length of the given string
  * @s: string whose length to be measured
@@ -15,25 +14,28 @@ int _strlen(char *s)
 		len++;
 		s++;
 	}
+
 	return (len);
 }
+
 /**
- * puts2 - prints every ather character of a string
- * @str: string to be printed
+ * rev_string - riverse a string
+ * @s: string to be  reversed.
  *
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int i, len;
+	int i, len, j;
 
-	len = _strlen(str);
-	i = 0;
-
-	while (i <= len - 1)
+	len = _strlen(s);
+	i = len - 1;
+	j = 0;
+	while (i >= 0)
 	{
-	if (i % 2 == 0)
-	_putchar(str[i]);
-	i++;
+		while(j <= len)
+		s[i] = s[j];
+		i--;
+		j++;
 	}
-	_putchar('\n');
+	s =str;
 }
