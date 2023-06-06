@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _set_string - function tsets the value of a pointer to a char.
+ * set_string - function tsets the value of a pointer to a char.
  * @s: destination
  * @to: source
  */
