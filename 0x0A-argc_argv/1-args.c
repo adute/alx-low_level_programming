@@ -9,11 +9,10 @@
 int main(int argc, char *argv[] __attribute__((unused)))
 {
 	int count = 0;
-	
+
 	while (count <= argc - 1)
 	{
 		count++;
-		
 	}
 		printf("%d\n", count - 1);
 	exit(EXIT_SUCCESS);
