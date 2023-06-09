@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 	if (atoi(argv[1]) < cent[i])
 		i++;
-	else if (atoi(argv[1]) == cent [i])
+	else if (atoi(argv[1]) == cent[i])
 		change = atoi(argv[1]) / cent[i];
 	}
 	printf("%d\n", change);
