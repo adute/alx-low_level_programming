@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 	while (i < argc)
 	{
-		if (atoi(argv[i]) == 0)
+		if (atoi(argv[i]) <= 0)
 		{
 			printf("%s\n", "Error");
 			return (1);
@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 	}
 	else
-	if (argc < 1)
 	{
 		printf("%d\n", 0);
 	}
