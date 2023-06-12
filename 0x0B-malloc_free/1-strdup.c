@@ -4,26 +4,21 @@
  * create_array -a function that returns a pointer to a newly allocated
  * space in memory, which contains a copy of the string 
  * given as a parameter.
- * @str: the character to be initialized with
- * Return: pointer to the array if yes
+ * @str: the string
+ * Return: pointer to the duplicated string on SUCCESS
  * NULL if size = 0 or if it fails
  */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
 	char *p;
-	unsigned int i = 0;
 
-	p = malloc(sizeof(c) +  size);
+	p = malloc(sizeof(str));
 
-	if (size == 0 || p == NULL)
+	if (p == NULL)
 	{
 		return (NULL);
 	}
-	while (i < size)
-	{
-		p[i] = c;
-		i++;
-	}
+	p = str;
+	free(p);
 	return (p);
-
 }
