@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * create_array -a function that creates an array of chars,
- * and initializes it with a specific char
- * @size: size of the array
- * @c: the character to be initialized with
+ * create_array -a function that returns a pointer to a newly allocated
+ * space in memory, which contains a copy of the string 
+ * given as a parameter.
+ * @str: the character to be initialized with
  * Return: pointer to the array if yes
  * NULL if size = 0 or if it fails
  */
