@@ -1,0 +1,1 @@
+This project is about dynamic Memory allocation, after going through the tasks and referces given its expected to understand what is malloc, free ,,, the difference between dynamic and automatic memory aloocation,,, how &why to use malloc,,,, how to use valgrind to check for memory leak
