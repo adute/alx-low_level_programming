@@ -32,13 +32,12 @@ char *_strdup(char *str)
 	int len;
 	int i = 0;
 
-	len = _strlen(str);
-	p = malloc(len * sizeof(char) + 1);
-
-	if (p ==NULL && str == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
+	len = _strlen(str);
+	p = malloc(len * sizeof(char) + 1);
 	while (str[i] != '\0')
 	{
 	p[i] = str[i];
