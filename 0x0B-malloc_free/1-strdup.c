@@ -17,7 +17,8 @@ int _strlen(char *s)
 	}
 
 	return (len);
-}/**
+}
+/**
  * _strdup -a function that returns a pointer to a newly allocated
  * space in memory, which contains a copy of the string
  * given as a parameter.
@@ -43,6 +44,5 @@ char *_strdup(char *str)
 	p[i] = str[i];
 	i++;
 	}
-	p[i] = '\0';
 	return (p);
 }
