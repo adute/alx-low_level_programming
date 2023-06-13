@@ -41,7 +41,7 @@ char *_strdup(char *str)
 
 	if (p == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	while (str[i] != '\0')
 	{
