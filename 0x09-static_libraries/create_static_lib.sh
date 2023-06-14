@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/bin/bashi
+gcc -c *.c
 ar rc liball.a *.c
 ranlib liball.a
