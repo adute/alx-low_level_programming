@@ -5,7 +5,7 @@
  * @name: name of the dog
  * @age: how old is the dog
  * @owner: whose dog
- *
+ * define dog_t
  */
 struct dog
 {
