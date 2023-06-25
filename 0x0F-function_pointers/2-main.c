@@ -42,10 +42,10 @@ int abs_is_98(int elem)
  */
 int main(void)
 {
-    int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
+    int array[20] = {0, -9, 9, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 9};
     int index;
 
-    index = int_index(NULL, 20, is_98);
+    index = int_index(array, 20, is_98);
     printf("%d\n", index);
     index = int_index(array, 0, abs_is_98);
     printf("%d\n", index);
