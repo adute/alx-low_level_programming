@@ -1,0 +1,1 @@
+C project 0x14-bit_manupilation; the tasks will be done using oneself research and after this task it is expected to ; Look for the right source of information without too much help and How to manipulate bits and use bitwise operators, let God be with us!
