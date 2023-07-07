@@ -20,38 +20,48 @@ unsigned int _pow(unsigned int a, unsigned int b)
 	return (p);
 }
 /**
+ * _strlen - print length of the given string
+ * @s: string whose length to be measured
+ * Return: the length of string
+ *
+ */
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
+}
+
+/**
  * _atoi - converts string to number
  * @s: the string
  * Return: number
- *
+ */
 unsigned int _atoi(const char *s)
 {
-        unsigned int len, num, sign, i;
+	unsigned int num, i;
 
-        sign = 1;
         num = 0;
         i = 0;
-        len = _strlen(s);
-
-        while (i < len)
-        {
-        if (s[i] == '-')
-        {
-                sign = sign * -1;
-                i++;
-        }
-        else
-                if (s[i] >= '0' && s[i] <= '9')
-        {
-                num = num * 10 + s[i] - '0';
-        }
+        /*len = _strlen(s);*/
+	while (s != NULL)
+	{
+	if (s[i] == '0' || s[i] <= '1')
+	{
+	num = num * 10 + s[i] - '0';
+	}
         else
         {
-                break;
+                return (0);
         }
         i++;
-        }
-        num = num * sign;
+	}
         return (num);
 }
 /**
@@ -65,16 +75,17 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i = 0;
 	unsigned int result = 0;
-	unsigned int last;
+	unsigned int last, num;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	while (b != 0)
+	num = _atoi(b);
+	while (num != 0)
 	{
-		last = b % 10;
-		b /= 10;
+		last = num % 10;
+		num /= 10;
 		result = result + last * _pow(2, i);
 	}
 return (result);
