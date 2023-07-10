@@ -14,11 +14,11 @@
  * the expected amount of bytes return 0
  */
 
-ssize_t read_textfile(const char *filename,size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fd, file_read, p;
-	char *buf = (char*)malloc((letters) * sizeof(char));
-	
+	char *buf = (char *)malloc((letters) * sizeof(char));
+
 	if (filename == NULL)
 	{
 		return (0);
